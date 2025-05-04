@@ -34,7 +34,9 @@ LoggerCpp comes with a `FindLoggerCpp.cmake` script to make integration seamless
 
    This will generate the `libLoggerCpp.a` (Linux/macOS) or `LoggerCpp.lib` (Windows) file in the `build` directory.
 
-3. **Set Environment Variables**:
+   NOTE: If in Linux, you will need to change the file in the `cmake` directory from `FindLoggerCpp.cmake` to `FindloggerCpp.cmake`
+
+4. **Set Environment Variables**:
 
    Set the environment variables to provide hints to the `FindLoggerCpp.cmake` script:
 
@@ -49,7 +51,7 @@ LoggerCpp comes with a `FindLoggerCpp.cmake` script to make integration seamless
       set LOGGERCPP_LIB_DIR=C:\path\to\loggerCpp\build
       ```
 
-4. **Integrate LoggerCpp in Your Project**:
+5. **Integrate LoggerCpp in Your Project**:
 
     - Add the path to `FindLoggerCpp.cmake` in your project's CMake configuration.
     - Use `find_package(loggerCpp REQUIRED)` to locate the library.
