@@ -18,7 +18,7 @@ LoggerCpp comes with a `FindLoggerCpp.cmake` script to make integration seamless
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/yourusername/loggerCpp.git
+   git clone https://github.com/John-Hatton/loggerCpp.git
    ```
 
 2. **Build the Library**:
