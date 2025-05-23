@@ -26,6 +26,10 @@ std::string LogMessage::getTimestamp() const {
     return ss.str();
 }
 
+LogLevel LogMessage::getLevel() const {
+    return level_;
+}
+
 std::string LogMessage::logLevelToString(LogLevel level) const {
     switch (level) {
         case LogLevel::Trace: return "Trace";

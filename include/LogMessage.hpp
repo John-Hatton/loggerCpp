@@ -13,6 +13,7 @@ class LogMessage {
 public:
     LogMessage(LogLevel level, const std::string& message);
     std::string toString() const;
+    LogLevel getLevel() const;
 
 private:
     LogLevel level_;

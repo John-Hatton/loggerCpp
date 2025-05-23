@@ -6,23 +6,20 @@
 #define LOGGERCPP_LOGFILESINK_HPP
 
 #include "Sink.hpp"
+#include "../LogLevel.hpp"
 #include <fstream>
 
 class FileSink : public Sink {
 public:
-    explicit FileSink(const std::string& filename)
-            : ofs_(filename, std::ios::app) {
-        if (!ofs_) {
-            throw std::runtime_error("Failed to open log file: " + filename);
-        }
-    }
+    // Declare the explicit constructor
+    explicit FileSink(const std::string& filename, LogLevel minLevel = LogLevel::Info);
 
-    void log(const LogMessage& message) override {
-        ofs_ << message.toString() << std::endl;
-    }
+    // Declare the overridden log method
+    void log(const LogMessage& message) override;
 
 private:
-    std::ofstream ofs_;
+    std::ofstream ofs_;  // Member for the file stream
+    LogLevel minimumLogLevel;  // Member for the log level
 };
 
 #endif //LOGGERCPP_LOGFILESINK_HPP
